@@ -2,6 +2,15 @@
 
 Tác giả: 圣骑士的传说.
 
+## Bản dịch thử
+
+- [Chương 1: Hoàng Sơn Chân Quân và nhóm Cửu Châu số 1](ban-dich/chuong-00001.md)
+- [Bảng tên gọi, thuật ngữ và xưng hô](QUY_UOC_DICH.md)
+
+Hiện đã dịch trọn chương 1 từ ZIP người dùng cung cấp. Chương 2–10 chưa dịch.
+
+## Tải bản gốc lên
+
 Thư mục dành để bạn tải lên các tệp truyện có quyền lưu trữ và chia sẻ.
 
 Trên GitHub, mở thư mục này, chọn **Add file → Upload files**, kéo các tệp
