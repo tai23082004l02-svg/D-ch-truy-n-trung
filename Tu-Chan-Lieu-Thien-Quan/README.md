@@ -2,12 +2,24 @@
 
 Tác giả: 圣骑士的传说.
 
-## Bản dịch thử
+## Bản dịch tiếng Việt
 
 - [Chương 1: Hoàng Sơn Chân Quân và nhóm Cửu Châu số 1](ban-dich/chuong-00001.md)
+- [Chương 2: Đợi bản tôn gieo một quẻ](ban-dich/chuong-00002.md)
+- [Chương 3: Một tờ đan phương](ban-dich/chuong-00003.md)
+- [Chương 4: Lôi kiếp Tam phẩm Hậu Thiên ở thành phố H](ban-dich/chuong-00004.md)
+- [Chương 5: Phải tin vào khoa học!](ban-dich/chuong-00005.md)
+- [Chương 6: Đồng Quái Tiên Sư](ban-dich/chuong-00006.md)
+- [Chương 7: Đám bất hảo bị quét sạch](ban-dich/chuong-00007.md)
+- [Chương 8: Vũ Nhu Tử và khu phố La Tín](ban-dich/chuong-00008.md)
+- [Chương 9: Một khu phố La Tín khác](ban-dich/chuong-00009.md)
+- [Chương 10: Chuyện nhỏ lúc dạo phố](ban-dich/chuong-00010.md)
+- [TXT ghép chương 1–10](ban-dich/chuong-00001-00010.txt)
 - [Bảng tên gọi, thuật ngữ và xưng hô](QUY_UOC_DICH.md)
 
-Hiện đã dịch trọn chương 1 từ ZIP người dùng cung cấp. Chương 2–10 chưa dịch.
+Đã dịch trọn chương 1–10 từ ZIP người dùng cung cấp. Bản TXT ghép bỏ ký hiệu
+định dạng Markdown để tiện đưa vào TTS. Các điểm khuyết và không nhất quán
+trong raw được ghi riêng ở cuối bảng quy ước dịch.
 
 ## Tải bản gốc lên
 
