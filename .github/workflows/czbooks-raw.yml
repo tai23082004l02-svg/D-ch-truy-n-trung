@@ -1,0 +1,66 @@
+name: CZBooks Raw
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      book_url:
+        description: Link mục lục CZBooks
+        required: true
+        default: https://czbooks.net/n/s6lf47
+        type: string
+      start:
+        description: Vị trí chương bắt đầu (từ 1)
+        required: true
+        default: '1'
+        type: string
+      end:
+        description: Vị trí chương cuối (tối đa 200 chương mỗi lần)
+        required: true
+        default: '2'
+        type: string
+      download:
+        description: Tải TXT (bỏ chọn để chỉ xem mục lục trong log)
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+concurrency:
+  group: czbooks-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test
+        run: python -m unittest -v test_czbooks_raw.py
+      - name: Read selected chapters
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          BOOK_URL: ${{ inputs.book_url }}
+          START_CHAPTER: ${{ inputs.start }}
+          END_CHAPTER: ${{ inputs.end }}
+          DOWNLOAD_CHAPTERS: ${{ inputs.download }}
+          RAW_OUTPUT: ${{ runner.temp }}/czbooks-raw
+        run: python run_online.py
+      - name: Save TXT files
+        if: always() && github.event_name == 'workflow_dispatch' && inputs.download
+        uses: actions/upload-artifact@v4
+        with:
+          name: czbooks-raw-${{ github.run_id }}
+          path: ${{ runner.temp }}/czbooks-raw/
+          if-no-files-found: warn
+          retention-days: 7
